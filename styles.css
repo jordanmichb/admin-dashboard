@@ -6,8 +6,10 @@
 
 body {
     display: grid;
-    grid-template-columns: 15rem 1fr;
+    grid-template-columns: clamp(220px, 25%, 20rem) 1fr;
+    background-color: #f8f9fa;
     min-height: 100vh;
+    height: 100%;
 }
 
 /* * * * * * * *
@@ -27,47 +29,72 @@ svg path {
  * * * * * * * */
 
 aside {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
     background-color: gray;
     padding: 1rem;
+    max-height: 100vh;
 }
 
 aside h2,
 nav a {
     color: #fffeff;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
     justify-items: center;
+
 }
 
 aside h2 {
     font-size: 1.7rem;
     margin-bottom: 2rem;
-    
 
-    border: 1px solid red;
 }
 
 nav {
-    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav a {
     text-decoration: none;
+    padding: 15px 0;
 }
 
 nav a:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition-duration: 150ms;
 }
 
-nav a.menu-split {
+nav a span, aside h2 span {
+    justify-self: start;
+    padding-left: 1rem;
+}
+
+nav div.menu-split {
     margin-top: 2rem;
 }
 
+/* * * * * * * *
+ * Header
+ * * * * * * * */
+ header {
+    padding: 1.5rem;
+ }
 
 /* * * * * * * * * * * * * * *
  * Visual Assistance - DELETE 
  * * * * * * * * * * * * * * */
 aside, header, main, footer {
     border: 1px solid red;
+}
+
+img {
+    padding: 5px;
+    border: 7px double red;
+    border-radius: 50%;
 }
