@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    min-height: 100vh;
+}
+
+/* * * * * * * *
+ * Shared Styles
+ * * * * * * * */
+svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+svg path {
+    fill: #4ffeff;
+}
+
+/* * * * * * * *
+ * Navigation
+ * * * * * * * */
+
+aside {
+    background-color: gray;
+    padding: 1rem;
+}
+
+aside h2,
+nav a {
+    color: #fffeff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+aside h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    
+
+    border: 1px solid red;
+}
+
+nav {
+    border: 1px solid red;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    transform: scale(1.2);
+}
+
+nav a.menu-split {
+    margin-top: 2rem;
+}
+
+
+/* * * * * * * * * * * * * * *
+ * Visual Assistance - DELETE 
+ * * * * * * * * * * * * * * */
+aside, header, main, footer {
+    border: 1px solid red;
+}
