@@ -22,6 +22,10 @@ svg {
     min-height: 1.5em;
 }
 
+svg:hover {
+    cursor: pointer;
+}
+
 svg path {
     fill: #4ffeff;
 }
@@ -133,9 +137,9 @@ form input {
  }
 
  .notification-btn {
-    flex: 1;
+    padding-right: 15px;
     margin-right: 25px;
-    padding-right: 10px;
+    margin-left: 5px;
     border-right: 2px solid gray;
  }
 
