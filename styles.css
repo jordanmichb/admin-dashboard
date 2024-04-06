@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('./fonts/roboto-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --svg-light: #e9ecef;
+    --svg-medium: #adb5bd;
+    --svg-dark: #343a40;
+
+    --text-light: var(--svg-light);
+    --text-medium: var(--svg-medium);
+    --text-dark: var(--svg-dark);
+
+    --main-background: #edf2f4;
+    --aside-background: #2b2d42;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +27,11 @@
 
 body {
     display: grid;
-    grid-template-columns: clamp(220px, 25%, 20rem) 1fr;
-    background-color: #f8f9fa;
+    grid-template-columns: clamp(220px, 15%, 20rem) 1fr;
+    background-color: var(--main-background);
     min-height: 100vh;
     height: 100%;
+    font-family: 'roboto';
 }
 
 /* * * * * * * *
@@ -27,7 +49,7 @@ svg:hover {
 }
 
 svg path {
-    fill: #4ffeff;
+    fill: var(--svg-medium);
 }
 
 .visible {
@@ -43,14 +65,13 @@ aside {
     top: 0;
     display: flex;
     flex-direction: column;
-    background-color: gray;
-    padding: 1rem;
+    background-color: var(--aside-background);
     max-height: 100vh;
 }
 
 aside h2,
 nav a {
-    color: #fffeff;
+    color: var(--text-medium);
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
@@ -61,6 +82,7 @@ nav a {
 aside h2 {
     font-size: 1.7rem;
     margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 nav {
@@ -70,14 +92,28 @@ nav {
     justify-content: space-between;
 }
 
+li {
+    padding: 0 1rem;
+}
+
 nav a {
     text-decoration: none;
     padding: 15px 0;
 }
 
-nav a:hover {
-    transform: scale(1.1);
-    transition-duration: 150ms;
+li:hover {
+    color: var(--text-light);
+    background-color: #424466;
+    border-left: 4px solid var(--text-light);
+    padding-left: calc(1rem - 4px);
+}
+
+li:hover a {
+    color: var(--text-light);
+}
+
+li:hover svg path {
+    fill: var(--svg-light);
 }
 
 nav a span, aside h2 span {
@@ -123,6 +159,10 @@ form input {
     align-items: center;
  }
 
+ header svg path {
+    fill: var(--svg-dark);
+ }
+
  form {
     justify-content: end;
     margin: 0 10px;
@@ -154,6 +194,6 @@ form input {
 /* * * * * * * * * * * * * * *
  * Visual Assistance - DELETE 
  * * * * * * * * * * * * * * */
-aside, header, main, footer {
+header, main, footer {
     border: 1px solid red;
 }
