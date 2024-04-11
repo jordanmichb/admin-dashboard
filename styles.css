@@ -43,7 +43,11 @@ body {
 
 main {
     display: grid;
-    gap: 5px;
+    padding: 16px;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 30px;
 }
 
 svg {
@@ -71,7 +75,7 @@ aside {
     display: flex;
     flex-direction: column;
     background-color: var(--aside-background);
-    /* max-height: 100vh; */
+    max-height: 100vh;
     /* min-height: 100vh; */
     /* flex: 0 0 auto; */
     width: 14.219rem; /* = 227.5px, needed for transition speed */
@@ -207,12 +211,11 @@ form input {
     border-radius: 50%;
  }
 
- /* * * * * * * * 
- * Projects
- * * * * * * * */
+/* * * * * * * * 
+* Projects
+* * * * * * * */
 .projects {
-    padding: 1rem;
-    background-color: #2b2d42;
+    grid-row: 1 / 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5px;
@@ -247,6 +250,7 @@ form input {
 .project-card p {
     color: var(--text-dark);
     margin-bottom: 1rem;
+    flex: 1;
 }
 
 .card-actions {
@@ -261,7 +265,30 @@ form input {
     margin: 0 10px;
 }
 
+/* * * * * * * * 
+* Announcements
+* * * * * * * */
+.announcements {
+    background-color: white;
+    border-radius: 5px;
+}
 
+.announcement {
+    margin: 30px;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid red;
+}
+
+.announcement h4 {
+    margin-bottom: 1em;
+}
+
+.announcement p {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
 
 
 /* * * * * * * * 
@@ -296,18 +323,18 @@ form input {
  * Visual Assistance - DELETE 
  * * * * * * * * * * * * * * */
 header, main, footer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .content {
     /* height: 2000px; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     /* width: 1000px; */
 
 }
 
 main section {
-    background-color: red;
+    /* background-color: red; */
 }
 
 .projects {
