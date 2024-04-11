@@ -28,26 +28,22 @@
     box-sizing: border-box;
 }
 
-/* body {
-    display: grid;
-    grid-template-columns: clamp(220px, 15%, 20rem) 1fr;
-    background-color: var(--main-background);
-    min-height: 100vh;
-    height: 100%;
-    font-family: 'roboto';
-} */
-
 body {
     background-color: var(--main-background);
     min-height: 100vh;
-    height: 100%;
+    /* height: 100%; */
     font-family: 'roboto';
     display: flex;
 }
 
 .content {
-    width: min-content;
+    flex: 1;
     transition-duration: 350ms;
+}
+
+main {
+    display: grid;
+    gap: 5px;
 }
 
 svg {
@@ -65,10 +61,6 @@ svg path {
     fill: var(--svg-medium);
 }
 
-/* .hidden {
-    display: none;
-} */
-
 /* * * * * * * *
  * Navigation
  * * * * * * * */
@@ -79,10 +71,10 @@ aside {
     display: flex;
     flex-direction: column;
     background-color: var(--aside-background);
-    max-height: 100vh;
-    min-height: 100vh;
+    /* max-height: 100vh; */
+    /* min-height: 100vh; */
+    /* flex: 0 0 auto; */
     width: 14.219rem; /* = 227.5px, needed for transition speed */
-    flex: 0 0 auto;
     transition: width 350ms, transform 350ms;
 }
 
@@ -147,7 +139,7 @@ nav a span, aside h2 span {
     transition: all 350ms;
 }
 
-nav div.menu-split {
+nav ul.menu-split {
     margin-top: 5rem;
 }
 
@@ -164,7 +156,6 @@ header {
 form input {
     margin: 0 1rem 0 10%;
     width: 0%;
-    /* min-width: 0; */
     height: 1.5rem;
     /* border: none; */
     border-radius: 5px;
@@ -216,6 +207,63 @@ form input {
     border-radius: 50%;
  }
 
+ /* * * * * * * * 
+ * Projects
+ * * * * * * * */
+.projects {
+    padding: 1rem;
+    background-color: #2b2d42;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+}
+
+.project-card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+}
+
+.project-card a {
+    display: block;
+    border-radius: 5px;
+    height: 200px;
+    background-image: url("./images/flower.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-card a:hover {
+    outline: 1px solid red;
+}
+
+.project-card h3 {
+    margin: 1em 0;
+}
+
+.project-card p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.card-actions {
+    align-self: end;
+}
+
+.card-actions svg:hover path {
+    fill: red;
+}
+
+.card-actions svg[title="View"] {
+    margin: 0 10px;
+}
+
+
+
+
 /* * * * * * * * 
  * Media Queries
  * * * * * * * */
@@ -254,8 +302,12 @@ header, main, footer {
 .content {
     /* height: 2000px; */
     border: 1px solid blue;
-    width: 1000px;
+    /* width: 1000px; */
 
+}
+
+main section {
+    background-color: red;
 }
 
 .projects {
