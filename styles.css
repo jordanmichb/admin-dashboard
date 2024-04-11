@@ -162,21 +162,19 @@ header {
 }
 
 form input {
-    margin: 1rem;
-    margin-left: 80%;
+    margin: 0 1rem 0 10%;
     width: 0%;
-    min-width: 0;
+    /* min-width: 0; */
     height: 1.5rem;
     /* border: none; */
     border-radius: 5px;
-    transition: all 250ms linear;
+    transition: all 250ms;
     visibility: hidden;
  }
 
  form input.visible {
-    width: 85%;
-    min-width: 100px;
-    margin: 1rem;
+    width: 40%;
+    min-width: 10px;
     visibility: visible;
  }
 
@@ -192,6 +190,7 @@ form input {
  form {
     justify-content: end;
     margin: 0 10px;
+    flex: 1;
  }
 
  .search-btn {
@@ -224,14 +223,14 @@ form input {
  @media (max-width: 760px) {
     aside {
         transform: translateX(-100%);
-        width: 5rem;
-        /* display: none; */
+        width: 5rem; /* Collapse aside during translate so .content has a non dynamic width to move */
     }
+    /* Collapse aside during translate so .content has a non dynamic width to move */
     aside span {
         opacity: 0; 
         visibility: hidden;
     }
-    /* Move content over when aside collapses, allows for smooth transition */
+
     .content {
         transform: translateX(-5rem);
     }
