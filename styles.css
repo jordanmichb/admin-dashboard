@@ -29,10 +29,10 @@
     --text-dark: var(--svg-dark);
 
     --main-background: #f8f9fa;
-    --aside-background: #0d1b2a;
+    --aside-background: #011627;
     --aside-hover: #495057b3;
 
-    --accent-color: #e5383b;
+    --accent-color: #48bfe3;
     --border-color: #dee2e6;
     --box-shadow: 3px 3px 10px #dee2e6;
 }
@@ -101,10 +101,10 @@ aside {
     flex-direction: column;
     background-color: var(--aside-background);
     max-height: 100vh;
-    /* min-height: 100vh; */
+    height: 100vh;
     /* flex: 0 0 auto; */
     width: 14.219rem; /* = 227.5px, needed for transition speed */
-    transition: width 350ms, transform 350ms;
+    transition: width 350ms, margin 350ms;
     box-shadow: 3px 0 7px #6c757d;
 }
 
@@ -133,6 +133,12 @@ aside h2 {
     padding: 1rem;
 }
 
+aside h2 svg {
+    /* filter: drop-shadow(0 0 3px var(--accent-color)); */
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--accent-color), inset 0 0 5px var(--accent-color);
+}
+
 aside h2 svg path {
     fill: var(--accent-color);
 }
@@ -156,7 +162,7 @@ nav a {
 li:hover {
     color: var(--text-light);
     background-color: var(--aside-hover);
-    box-shadow: inset 4px 0 var(--accent-color);
+    box-shadow: inset 6px 0 var(--accent-color);
 }
 
 li:hover a {
@@ -170,7 +176,7 @@ li:hover svg path {
 nav a span, aside h2 span {
     justify-self: start;
     padding-left: 1rem;
-    transition: opacity 350ms;
+    transition: opacity 350ms, visibility 350ms;
 }
 
 nav ul.menu-split {
@@ -184,12 +190,59 @@ header {
     background-color: white;
     border-radius: 5px;
     margin: 16px;
-    padding: 16px;
+    padding: 8px 32px;
     display: flex;
     align-items: center;
     justify-content: end;
     box-shadow: var(--box-shadow);
     border: 1px solid var(--border-color);
+}
+
+.header-actions {
+    margin: 16px;
+    margin-left: 0;
+    display: flex;
+   
+}
+
+header button {
+    /* padding: .5rem 1rem; */
+    /* background-color: #f8f9fa; */
+    /* border: 1px solid var(--border-color); */
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-dark);
+    font-family: 'roboto';
+    font-weight: 500;
+}
+
+header button:hover {
+    color: var(--accent-color);
+}
+
+#menu-btn:hover svg path {
+    fill: var(--accent-color);
+}
+
+button.menu {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 32px;
+    display: none;
+}
+
+#menu-btn, #menu-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+button.upload {
+    margin: 0 16px;
 }
 
 form input {
@@ -202,51 +255,61 @@ form input {
     border-radius: 10px;
     transition: all 250ms;
     visibility: hidden;
- }
+}
 
- form input.visible {
-    width: 40%;
+form input.visible {
+    width: 80%;
     min-width: 10px;
     visibility: visible;
- }
+}
 
- form, .user {
+form input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+form, .user {
     display: flex;
     align-items: center;
- }
+}
 
- header svg path {
+header svg path {
     fill: var(--svg-dark);
- }
+}
 
- form {
+form {
     justify-content: end;
     margin: 0 10px;
     flex: 1;
- }
+}
 
- .search-btn {
+.search-btn {
     justify-self: end;
- }
+}
 
- .user-name {
-    margin-right: 25px;
- }
+.user-name {
+    margin-right: 20px;
+    font-size: .9rem;
+}
 
- .notification-btn {
+.notification-btn {
     padding-right: 15px;
-    margin-right: 25px;
+    margin-right: 15px;
     margin-left: 5px;
-    border-right: 2px solid gray;
- }
+    border-right: 2px solid #dee2e6;
+}
 
- .profile-pic {
-    width: 50px;
-    height: 50px;
+.profile-pic {
+    width: 55px;
+    height: 55px;
     padding: 3px;
     border: 2px solid #dee2e6;
     border-radius: 50%;
- }
+    transition: box-shadow 350ms;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 10px 2px var(--accent-color);
+}
 
 /* * * * * * * * 
 * Projects
@@ -267,10 +330,12 @@ form input {
     padding: 30px;
     transition: transform 350ms;
     box-shadow: var(--box-shadow);
+    font-size: .9rem;
+    line-height: 1.7em;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .project-card img {
@@ -278,10 +343,12 @@ form input {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    border: 1px solid var(--border-color);
 }
 
 .project-card img:hover {
-    outline: 3px solid var(--accent-color);
+    border: none;
+    box-shadow: 0 0 10px 2px var(--accent-color);
 }
 
 .project-card h3 {
@@ -330,6 +397,18 @@ form input {
     border-bottom: 2px solid var(--accent-color);
 }
 
+.announcement a {
+    color: var(--text-dark);
+    display: inline-block;
+    margin-bottom: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.announcement a:hover {
+    color: var(--accent-color)
+}
+
 .announcement h4 {
     margin-bottom: 1em;
     font-weight: 500;
@@ -338,6 +417,8 @@ form input {
 .announcement p {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
+    font-size: .9rem;
+    line-height: 1.7em;
 }
 
 /* * * * * * * * 
@@ -372,7 +453,12 @@ form input {
 }
 
 .trend-user {
+    font-weight: 500;
     text-decoration: none;
+    color: var(--text-dark);
+}
+
+.trend-user:hover {
     color: var(--accent-color);
 }
 
@@ -388,37 +474,44 @@ footer {
     margin: 16px;
     border-radius: 5px;
     text-align: center;
-    padding: .9rem;
-    font-size: .9rem;
+    padding: .7rem;
+    font-size: .8rem;
+    color: var(--text-dark)
 }
 
 /* * * * * * * * 
  * Media Queries
  * * * * * * * */
 
- @media (max-width: 760px) {
+@media (max-width: 760px) {
     aside {
-        transform: translateX(-100%);
-        width: 5rem; /* Collapse aside during translate so .content has a non dynamic width to move */
+        width: 5rem;
+        margin-left: -5rem;
+        box-shadow: none;
     }
-    /* Collapse aside during translate so .content has a non dynamic width to move */
+
     aside span {
         opacity: 0; 
         visibility: hidden;
     }
 
-    .content {
-        transform: translateX(-5rem);
+    button.menu {
+        display: unset;
     }
 
     .user-name {
         display: none;
     }
+}
 
-    header {
-        /* grid-template-columns: 200px 1fr; */
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
     }
- }
+}
+
+
 
 /* * * * * * * * * * * * * * *
  * Visual Assistance - DELETE 

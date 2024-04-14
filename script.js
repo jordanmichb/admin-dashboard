@@ -2,15 +2,21 @@ const searchbar = document.querySelector("#searchbar");
 const searchBtn = document.querySelector(".search-btn");
 const asideToggle = document.querySelector("aside h2");
 const aside = document.querySelector("aside");
-const content = document.querySelector(".content")
+const menuBtn = document.querySelector("#menu-btn");
+
+
 
 searchBtn.addEventListener('click', () => {
     searchbar.classList.toggle("visible"); 
-    searchbar.focus();
+    setTimeout(() => {searchbar.focus()}, 10);
 });
 
 asideToggle.addEventListener('click', () => {
     aside.classList.toggle("collapsed");
+})
+
+menuBtn.addEventListener('click', () => {
+    
 })
 
 // if (window.screen.width <= 760) {
