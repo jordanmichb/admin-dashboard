@@ -108,13 +108,18 @@ aside {
     box-shadow: 3px 0 7px #6c757d;
 }
 
-aside.collapsed {
+aside.collapsed{
     width: 5rem;
 }
 
-aside.collapsed span {
+aside.collapsed span{
     opacity: 0; 
     visibility: hidden;
+}
+
+aside.menu-expand {
+    margin-left: 0;
+    box-shadow: 3px 0 7px #6c757d;
 }
 
 aside h2 button,
@@ -129,7 +134,6 @@ nav a {
 
 aside h2 button {
     font-size: 1.7rem;
-    margin-bottom: 2rem;
     padding: 1rem;
     background: none;
     width: 100%;
@@ -137,9 +141,8 @@ aside h2 button {
 }
 
 aside h2 svg {
-    /* filter: drop-shadow(0 0 3px var(--accent-color)); */
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--accent-color), inset 0 0 5px var(--accent-color);
+    /* filter: drop-shadow(0 0 10px var(--accent-color)); */
+    box-shadow: 0 0 5px var(--accent-color);
 }
 
 aside h2 svg path {
@@ -155,6 +158,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 
 nav a {
@@ -179,7 +183,7 @@ li:hover svg path {
 nav a span, aside h2 span {
     justify-self: start;
     padding-left: 1rem;
-    transition: opacity 350ms, visibility 350ms;
+    transition: opacity 200ms, visibility 350ms;
 }
 
 nav ul.menu-split {
@@ -487,9 +491,9 @@ footer {
 /* * * * * * * * 
  * Media Queries
  * * * * * * * */
-
 @media (max-width: 760px) {
     aside {
+        position: absolute;
         width: 5rem;
         margin-left: -5rem;
         box-shadow: none;
