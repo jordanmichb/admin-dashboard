@@ -117,7 +117,7 @@ aside.collapsed span {
     visibility: hidden;
 }
 
-aside h2,
+aside h2 button,
 nav a {
     color: var(--text-medium);
     display: grid;
@@ -127,10 +127,13 @@ nav a {
 
 }
 
-aside h2 {
+aside h2 button {
     font-size: 1.7rem;
     margin-bottom: 2rem;
     padding: 1rem;
+    background: none;
+    width: 100%;
+    border: none;
 }
 
 aside h2 svg {
@@ -284,6 +287,7 @@ form {
 
 .search-btn {
     justify-self: end;
+    font-size: 1rem;
 }
 
 .user-name {
@@ -296,6 +300,7 @@ form {
     margin-right: 15px;
     margin-left: 5px;
     border-right: 2px solid #dee2e6;
+    font-size: 1rem;
 }
 
 .profile-pic {
