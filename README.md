@@ -4,6 +4,7 @@ Try it out here:
 
 https://jordanmichb.github.io/admin-dashboard/
 
+![Screen Shot 2024-04-18 at 2 05 41 PM](https://github.com/jordanmichb/admin-dashboard/assets/95947696/4d516cab-1242-482d-9c3f-b3c88ee5929a)
 
 
 
