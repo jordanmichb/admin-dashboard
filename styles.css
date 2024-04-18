@@ -241,6 +241,8 @@ form input {
     border-radius: 10px;
     transition: all 250ms;
     visibility: hidden;
+    font-family: 'roboto';
+    padding: 0 1rem;
 }
 
 form input.visible {
@@ -250,7 +252,7 @@ form input.visible {
 }
 
 form input:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 1px solid var(--accent-color);
 }
 
 form, .user {
