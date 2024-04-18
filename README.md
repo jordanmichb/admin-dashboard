@@ -1,5 +1,13 @@
 # admin-dashboard
 
+Try it out here:
+
+https://jordanmichb.github.io/admin-dashboard/
+
+
+
+
+
 Credits:
 
 - User Icon: [User icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/user)
@@ -10,8 +18,7 @@ Credits:
 - Leaves icon: Image by [kotkoa](https://www.freepik.com/author/kotkoa) on [Freepik](https://www.freepik.com/free-photo/green-chestnut-leaves_1436226.htm#fromView=search&page=1&position=46&uuid=75cb3ae0-679e-4f81-bdca-4a78f0a3f9d7)
 - Green/gold icon: Image by [vectorcorp](https://www.freepik.com/author/vectorcorp) on [Freepik](https://www.freepik.com/free-photo/green-abstract-cement-with-gold-texture_20454917.htm#fromView=search&page=1&position=19&uuid=6bbc8060-d253-4e10-afc1-978767c36d98)
 - Paper waves icon: Image by [freepik](https://www.freepik.com/author/freepik) on [Freepik](https://www.freepik.com/free-photo/multicolored-psychedelic-paper-shapes_25633722.htm#fromView=search&page=1&position=28&uuid=6bbc8060-d253-4e10-afc1-978767c36d98)
-- Ripped paper lady icon: Image by [rawpixel.com](https://www.freepik.com/author/rawpixel-com) on [Freepik](https://www.freepik.com/free-photo/
-bw-greek-statue-image-torn-paper-style-remixed-media_17227711.htm#fromView=search&page=1&position=28&uuid=175b104b-5480-407b-bb52-6825cd0a8c5b)
+- Ripped paper lady icon: Image by [rawpixel.com](https://www.freepik.com/author/rawpixel-com) on [Freepik](https://www.freepik.com/free-photo/bw-greek-statue-image-torn-paper-style-remixed-media_17227711.htm#fromView=search&page=1&position=28&uuid=175b104b-5480-407b-bb52-6825cd0a8c5b)
 - Color swirls icon: Image by [vecstock](https://www.freepik.com/author/vecstock) on [Freepik](https://www.freepik.com/free-photo/vibrant-yellow-blue-waves-showcase-modern-creativity-generated-by-ai_40968034.htm#page=2&position=16&from_view=author&uuid=e628012f-f547-4e7c-81b6-d3d4a3e5658e)
 - Rose gold icon: Image by [vectonauta](https://www.freepik.com/author/vectonauta) on [Freepik](https://www.freepik.com/free-photo/pink-watercolour-textured-background-with-gold-glitter-traces_27513186.htm#fromView=search&page=1&position=13&uuid=a55e2aab-9cf4-41d5-ade8-6811d346df16)
 
