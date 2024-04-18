@@ -50,7 +50,6 @@
 body {
     background-color: var(--main-background);
     min-height: 100vh;
-    /* height: 100%; */
     font-family: 'roboto';
     display: flex;
 }
@@ -102,8 +101,7 @@ aside {
     background-color: var(--aside-background);
     max-height: 100vh;
     height: 100vh;
-    /* flex: 0 0 auto; */
-    width: 14.219rem; /* = 227.5px, needed for transition speed */
+    width: 14.219rem; /* = 227.5px, needed for transition speed to work */
     transition: width 350ms, margin 350ms;
     box-shadow: 3px 0 7px #6c757d;
 }
@@ -129,7 +127,6 @@ nav a {
     grid-template-columns: 3rem 1fr;
     align-items: center;
     justify-items: center;
-
 }
 
 aside h2 button {
@@ -141,7 +138,6 @@ aside h2 button {
 }
 
 aside h2 svg {
-    /* filter: drop-shadow(0 0 10px var(--accent-color)); */
     box-shadow: 0 0 5px var(--accent-color);
 }
 
@@ -205,24 +201,9 @@ header {
     border: 1px solid var(--border-color);
 }
 
-.header-actions {
-    margin: 16px;
-    margin-left: 0;
-    display: flex;
-   
-}
-
 header button {
-    /* padding: .5rem 1rem; */
-    /* background-color: #f8f9fa; */
-    /* border: 1px solid var(--border-color); */
     background: none;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: var(--text-dark);
-    font-family: 'roboto';
-    font-weight: 500;
 }
 
 header button:hover {
@@ -234,8 +215,6 @@ header button:hover {
 }
 
 button.menu {
-    background: none;
-    border: none;
     display: flex;
     align-items: center;
     padding: 0;
@@ -255,7 +234,7 @@ button.upload {
 form input {
     margin: 0 1rem 0 10%;
     width: 0%;
-    height: 2rem;
+    height: 1.5rem;
     background-color: #e9ecef;
     border: none;
     border: 1px solid #dee2e6;
@@ -330,6 +309,37 @@ form {
     gap: 16px;
 }
 
+.projects-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;;
+}
+
+.projects-header h2 {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.projects-header button {
+    background: none;
+    border: none;
+}
+
+.projects-header button svg {
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+}
+
+.projects-header button svg path {
+    fill: var(--svg-dark)
+}
+
+.projects-header button:hover svg path {
+    fill: var(--accent-color);
+}
+
 .project-card {
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -374,6 +384,14 @@ form {
     align-self: end;
 }
 
+.card-actions svg {
+    transition: transform 350ms;
+}
+
+.card-actions svg:hover {
+    transform: scale(1.2);
+}
+
 .card-actions svg:hover path {
     fill: var(--accent-color);
 }
@@ -392,10 +410,6 @@ form {
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
     border: 1px solid var(--border-color);
-}
-
-.announcement {
-    /* margin: 30px; */
 }
 
 .announcement:not(:first-child) {
@@ -511,6 +525,11 @@ footer {
     .user-name {
         display: none;
     }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -518,30 +537,4 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr min-content;
     }
-}
-
-
-
-/* * * * * * * * * * * * * * *
- * Visual Assistance - DELETE 
- * * * * * * * * * * * * * * */
-header, main, footer {
-    /* border: 1px solid red; */
-}
-
-.content {
-    /* height: 2000px; */
-    /* border: 1px solid blue; */
-    /* width: 1000px; */
-
-}
-
-main section {
-    /* background-color: red; */
-}
-
-.projects {
-    /* width: 1500px;
-    height: 2000px;
-    border: 1px solid blue; */
 }

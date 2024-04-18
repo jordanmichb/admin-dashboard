@@ -8,7 +8,7 @@ const menuBtn = document.querySelector("#menu-btn");
 
 searchBtn.addEventListener('click', () => {
     searchbar.classList.toggle("visible"); 
-    setTimeout(() => {searchbar.focus()}, 10);
+    setTimeout(() => {searchbar.focus()}, 15);
 });
 
 asideToggle.addEventListener('click', () => {
