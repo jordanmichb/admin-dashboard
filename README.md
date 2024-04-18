@@ -1,10 +1,19 @@
 # admin-dashboard
 
+Responsive admin dashboard built using HTML, CSS, and JavaScript
+
 Try it out here:
 
 https://jordanmichb.github.io/admin-dashboard/
 
+Tools:
+- HTML, CSS, JavaScript
+- Visual Studio Code
+- Github / Git
+
 ![Screen Shot 2024-04-18 at 2 05 41 PM](https://github.com/jordanmichb/admin-dashboard/assets/95947696/4d516cab-1242-482d-9c3f-b3c88ee5929a)
+![Screen Shot 2024-04-18 at 2 08 46 PM](https://github.com/jordanmichb/admin-dashboard/assets/95947696/70a04fe8-4cb1-41ac-abab-5978d88e40bb)
+![Screen Shot 2024-04-18 at 2 09 04 PM](https://github.com/jordanmichb/admin-dashboard/assets/95947696/feffd82a-10c9-430a-8666-96321e3c80b1)
 
 
 
