@@ -1,4 +1,6 @@
-# admin-dashboard
+# The Odin Project
+
+## Admin Dashboard
 
 Responsive admin dashboard built using HTML, CSS, and JavaScript
 
